@@ -1,0 +1,495 @@
+<html>
+
+<head>
+    <style>
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  font-size: 28px;
+ 
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: #ddd;
+  font-size: 28px;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+                    background-color: black;
+                    color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+
+
+
+
+        .container {
+            background-color: #333;
+        }
+
+
+        .column {
+            float: left;
+            margin-left: 17%;
+            width: 10%;
+          
+        }
+
+        p {
+            width: 50%
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(99, 99, 99);
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url(static/mountians.jpg);
+
+            /* Full height */
+            height: 200px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.4;
+        }
+
+        body {
+            margin: 0;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+        #navbar a:hover {
+            background-color: black;
+            color: #ddd;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    {% block title %}{% endblock %}
+
+    {% block main %}
+    <div style="; font-size:30px;color:white">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Web Site Customization
+                    <a class="active" href="/web_selecter"><img src="{{ url_for('static', filename="small_logo.png") }}" width= 5%></a>
+                </h1> 
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        
+
+
+
+    </div>
+
+    <div id="navbar">
+        <a class="active" href="/web_selecter">Back</a>
+        
+      
+    </div>
+
+
+    <div class="img">
+        <div class="parallax"></div>
+        <div
+            style="height:500px;background: linear-gradient(209deg, rgba(68,98,132,1) 0%, rgba(8,49,93,1) 87%); font-size:30px;color:white">
+            <div id="navbar">
+                <a>text</a>
+            </div>
+            <p style= "color: black">
+            <form action="/option1" method="POST">
+
+                <label for="title">title</label>
+                <input type="text" id="title" name="title" placeholder="Enter text here">
+
+
+
+                <label for="image1">image 1</label>
+                <input type="text" id="image1" name="image1" placeholder="Enter link to image here">
+
+                <label for="image2">image 2</label>
+                <input type="text" id="image2" name="image2" placeholder="Enter link to image here">
+
+                <label for="image3">image 3</label>
+                <input type="text" id="image3" name="image3" placeholder="Enter link to image here">
+
+                <label for="image4">image 4</label>
+                <input type="text" id="image4" name="image4" placeholder="Enter link to image here">
+
+                <label for="image5">image 5</label>
+                <input type="text" id="image5" name="image5" placeholder="Enter link to image here">
+
+                <label for="image6">image 6</label>
+                <input type="text" id="image6" name="image6" placeholder="Enter link to image here">
+
+                <label for="image7">image 7</label>
+                <input type="text" id="image7" name="image7" placeholder="Enter link to image here">
+
+                <label for="image8">image 8</label>
+                <input type="text" id="image8" name="image8" placeholder="Enter link to image here">
+
+                <label for="image9">image 9</label>
+                <input type="text" id="image9" name="image9" placeholder="Enter link to image here">
+
+
+                <label for="location1">location 1</label>
+                <input type="text" id="location1" name="location1" placeholder="Enter the text here">
+
+                <label for="location2">location 2</label>
+                <input type="text" id="location2" name="location2" placeholder="Enter the text here">
+                
+                <label for="location3">location 3</label>
+                <input type="text" id="location3" name="location3" placeholder="Enter the text here">
+
+                <label for="location4">location 4</label>
+                <input type="text" id="location4" name="location4" placeholder="Enter the text here">
+
+                <label for="location5">location 5</label>
+                <input type="text" id="location5" name="location5" placeholder="Enter the text here">
+
+                <label for="location6">location 6</label>
+                <input type="text" id="location6" name="location6" placeholder="Enter the text here">
+
+                <label for="location7">location 7</label>
+                <input type="text" id="location7" name="location7" placeholder="Enter the text here">
+
+                <label for="location8">location 8</label>
+                <input type="text" id="location8" name="location8" placeholder="Enter the text here">
+
+                <label for="location9">location 9</label>
+                <input type="text" id="location9" name="location9" placeholder="Enter the text here">
+
+
+
+
+                <label for="image_of_you1">image of you 1</label>
+                <input type="text" id="image_of_you1" name="image_of_you1" placeholder="Enter link to image here">
+
+                <label for="image_of_you2">image of you 2</label>
+                <input type="text" id="image_of_you2" name="image_of_you2" placeholder="Enter link to image here">
+                
+                <div class="row">
+                    <div class="column" style="background-color:">
+                        <label for="about_you">about_you</label><br>
+                        <textarea name="about_you" rows="10" cols="30" >
+                </textarea>
+                    </div>
+
+
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" placeholder="Enter email here">
+
+                <label for="footer">footer</label>
+                <input type="text" id="footer" name="footer" placeholder="Enter footer text here">
+
+                <label for="home">home</label>
+                <input type="text" id="home" name="home" placeholder="Enter home here">
+
+                <label for="phone_no">phone number</label>
+                <input type="text" id="phone_no" name="phone_no" placeholder="Enter phone_no here">
+
+                <label for="bg_color">Backgornd colour</label>
+                <input type="text" id="bg_color" name="bg_color" placeholder="Enter Background colour here">
+
+             
+
+
+
+                    </div>
+                </div>
+            </p>
+        </div>
+   
+
+     
+
+
+    <button type="submit" class="btn btn-primary">submit</button>
+
+    <div class="parallax"></div>
+    
+    
+
+
+
+
+    </div>
+
+    </form>
+
+    {% endblock %}
+    <div style="height:500px;background: linear-gradient(209deg, rgba(68,98,132,1) 0%, rgba(8,49,93,1) 87%); font-size:30px;color:white">
+            <div id="navbar">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Contact</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Photo Links</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">About You</button>
+                  </div>
+            </div>
+            <p style= "color: black">
+<!-- Tab content -->
+<div id="London" class="tabcontent" id="defaultOpen">
+    <h3>Contact</h3>
+    <p>
+      <label for="email">email</label>
+      <input type="text" id="email" name="email" placeholder="Enter email here">
+  
+      <label for="footer">footer</label>
+      <input type="text" id="footer" name="footer" placeholder="Enter footer text here">
+  
+      <label for="home">home</label>
+      <input type="text" id="home" name="home" placeholder="Enter home here">
+  
+      <label for="phone_no">phone number</label>
+      <input type="text" id="phone_no" name="phone_no" placeholder="Enter phone_no here">
+  
+      <label for="bg_color">Backgornd colour</label>
+      <input type="text" id="bg_color" name="bg_color" placeholder="Enter Background colour here">
+  
+
+  
+  
+  
+    </p>
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+    <h3>Photo Links</h3>
+    <p>
+      <label for="image1">image 1</label>
+      <input type="text" id="image1" name="image1" placeholder="Enter link to image here">
+  
+      <label for="image2">image 2</label>
+      <input type="text" id="image2" name="image2" placeholder="Enter link to image here">
+  
+      <label for="image3">image 3</label>
+      <input type="text" id="image3" name="image3" placeholder="Enter link to image here">
+  
+      <label for="image4">image 4</label>
+      <input type="text" id="image4" name="image4" placeholder="Enter link to image here">
+  
+      <label for="image5">image 5</label>
+      <input type="text" id="image5" name="image5" placeholder="Enter link to image here">
+  
+      <label for="image6">image 6</label>
+      <input type="text" id="image6" name="image6" placeholder="Enter link to image here">
+  
+      <label for="image7">image 7</label>
+      <input type="text" id="image7" name="image7" placeholder="Enter link to image here">
+  
+      <label for="image8">image 8</label>
+      <input type="text" id="image8" name="image8" placeholder="Enter link to image here">
+  
+      <label for="image9">image 9</label>
+      <input type="text" id="image9" name="image9" placeholder="Enter link to image here">
+  
+  
+      <label for="location1">location 1</label>
+      <input type="text" id="location1" name="location1" placeholder="Enter the text here">
+  
+      <label for="location2">location 2</label>
+      <input type="text" id="location2" name="location2" placeholder="Enter the text here">
+      
+      <label for="location3">location 3</label>
+      <input type="text" id="location3" name="location3" placeholder="Enter the text here">
+  
+      <label for="location4">location 4</label>
+      <input type="text" id="location4" name="location4" placeholder="Enter the text here">
+  
+      <label for="location5">location 5</label>
+      <input type="text" id="location5" name="location5" placeholder="Enter the text here">
+  
+      <label for="location6">location 6</label>
+      <input type="text" id="location6" name="location6" placeholder="Enter the text here">
+  
+      <label for="location7">location 7</label>
+      <input type="text" id="location7" name="location7" placeholder="Enter the text here">
+  
+      <label for="location8">location 8</label>
+      <input type="text" id="location8" name="location8" placeholder="Enter the text here">
+  
+      <label for="location9">location 9</label>
+      <input type="text" id="location9" name="location9" placeholder="Enter the text here">
+  
+  
+  
+  
+  
+    </p>
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+    <h3>About you</h3>
+    <p>
+  <label for="image_of_you1">image of you 1</label>
+                  <input type="text" id="image_of_you1" name="image_of_you1" placeholder="Enter link to image here">
+  
+                  <label for="image_of_you2">image of you 2</label>
+                  <input type="text" id="image_of_you2" name="image_of_you2" placeholder="Enter link to image here">
+                  
+                  <div class="row">
+                      <div class="column" style="background-color:">
+                          <label for="about_you">about_you</label><br>
+                          <textarea name="about_you" rows="10" cols="30" >
+                  </textarea>
+                      </div>
+  
+  
+  
+  
+  
+    </p>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+      </p>
+    </div>
+  
+   </div>
+
+
+
+  
+
+
+
+
+
+<script>
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+
+
+
+
+</html>

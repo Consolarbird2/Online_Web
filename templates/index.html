@@ -1,0 +1,72 @@
+<html>
+
+<head>
+  <title>
+    {{ title }}
+  </title>
+  <style>
+
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style the header */
+    .header {
+      background-color: {{ headback }} ;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+
+    .parallax {
+      /* The image used */
+      background-image: url("{{ image }}");
+
+      /* Full height */
+      height: 300px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.4;
+      margin-top; 0;
+      padding-top: 0;
+
+    }
+
+  </style>
+</head>
+
+<body style="background-color:{{ background }}; text-color= {{ text }}; margin: 0">
+  <h1 div class=header>{{ heading }}</h1>
+
+
+
+
+  <div class="parallax"></div>
+  <div class="row">
+    <div class="column" style="background-color:{{ headback }}">{{ para1 }}</div>
+    <div class="column" style="background-color:{{ headback }}">{{ para2 }}</div>
+    <div class="column" style="background-color:{{ headback }}">{{ para3 }}</div>
+  </div>
+
+
+  </div>
+</body>
+
+
+</html>
