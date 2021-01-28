@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 
 
-@app.route("/web_selecter", methods=["GET", "POST"])
-def web_selecter():
+@app.route("/index", methods=["GET", "POST"])
+def index():
     if request.method == "POST":
             req = request.form
             web_num = ["num"]
-    return render_template("/web_selecter.html")
+    return render_template("/index.html")
 
 @app.route("/option1", methods=["GET", "POST"])
 def option1():
